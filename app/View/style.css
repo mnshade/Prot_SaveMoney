@@ -65,7 +65,7 @@ body {
 .banner {
     width: max;
     height: 400px;
-    background-color: rgba(172, 240, 104, 0.89);
+    background-color: red;
 }
 .banner .info {
     padding-top: 300px;
