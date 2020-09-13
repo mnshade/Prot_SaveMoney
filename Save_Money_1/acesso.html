@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Cliente</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container-fluid mt-5 mb-5">
-        <div class="row ">
-            <div class="col-4">
-            </div>
-            <div class="col-5">
-                <div id="container_login" class="container-fluid text-center">
-                    <div class="card text-center bg-success " style="width: 14rem;">
-                        <img src="img/edmilson.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Acesso ao Usuário</h5>              
-                        </div>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item"><input type="text" id="input" placeholder="E-mail"></li>
-                          <li class="list-group-item"><input type="text" id="input" placeholder="Senha"></li>
-                          
-                        </ul>
-                        
-                        <div class="card-body">
-                          <a href="#" class="card-link text-light btn btn-dark"><buttom type="buttom">Entrar</buttom></a><br>
-                          <br>
-                          <a href="cadastro.html" class="card-link text-light btn btn-dark"><buttom type="buttom">Cadastrar</buttom></a>
-                        </div>
-                      </div>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+      <header>
+        <div  class="wrapper">
+            <nav class="navbar navbar-expand-md  navbar-dark bg-success fixed-left">
+                <a class="navbar-brand " href="index.html"><img src="img/icon_SM2.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Plataforma</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"  href="#">Objetivo</a>
+                        </li>
+                    </ul>                                               
+                    
                 </div>
-            </div>
-            <div class="col-3">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </nav>
+        </div>                  
+      </header>
+        <div class="container-fluid mt-5 mb-5">       
+            <div  class="container-fluid   text-center">              
+              <div class="card border-dark bg-success" style="width: 14rem;">
+                <br>
+                <h5 class="card-title ">Acesso ao Usário</h5>
+                <br>
+                <img src="img/edmilson.jpg" class="card-img-top" alt="responsive image">
                 
-    
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item  btn-success"><input type="text" id="input" placeholder="E-mail"></li>
+                    <li class="list-group-item  btn-success"><input type="text" id="input" placeholder="Senha"></li>
+                </ul>
+                <div class="card-body">
+                  <div class="card-body">
+                    <a href="#" class="card-link text-light btn btn-dark"><buttom type="buttom">Entrar</buttom></a><br>
+                    <br>
+                    <a href="cadastro.html" class="card-link text-light btn btn-dark"><buttom type="buttom">Cadastrar</buttom></a>
+                  </div>
+                </div>
+              </div>             
+ 
+           </div>
+        </div>
+                
+                
+            
+        
 
-        <!-- BOOTSTRAP JS-->
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        
-        
-</body>
+
+        <footer>    
+          
+
+          <!-- BOOTSTRAP JS-->
+          <script src="js/jquery.js"></script>
+          <script src="js/bootstrap.bundle.min.js"></script>
+          
+      </footer>
+                
+                
+  </body>
 </html>
