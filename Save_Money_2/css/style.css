@@ -371,12 +371,14 @@ label {
   font-size: 0.9em;
   padding-left: 10pt; }
 
-input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
+
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="date"], input[type="tel"], input[type="url"], input[type="password"] {
   appearance: none;
   border: 1px solid #eee;
   width: 100%;
   transition: 0.7s;
-  color: #111;
+  color: rgba(124, 122, 122, 0.76);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   padding: 10pt 20pt;
@@ -384,11 +386,10 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   background-color: #f7f7f7;
   margin-bottom: 1.4em;
   display: block; }
-  input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
+  input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="date"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
     border-color: #81c95c;
     outline: 0;
     background-color: #ffffff; }
-
 textarea {
   appearance: none;
   border: 1px solid #eee;
