@@ -1237,3 +1237,10 @@ select {
         border-bottom: 1px solid #65b53d;
         transform: none;
         transition: none; } }
+
+
+.hero__button:hover {
+  background: rgba(255, 255, 255, 0.534);
+  color: rgb(54, 54, 54);
+  border-color: #58ff04;
+}
