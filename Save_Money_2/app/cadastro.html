@@ -3,7 +3,7 @@
 <head>
 	<meta class="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>SaveMovey - Plataforma</title>
+	<title>SaveMoney - Cadastro</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel='stylesheet' href='css/style.css' />
 </head>
@@ -15,29 +15,35 @@
 				<a href="index.html" class="navbar__logo">SaveMoney</a>
 				<nav class="navbar__menu">
 					<ul>
+						<li><a href="login.html">Login</a></li>
 						<li><a href="index.html">Início</a></li>
-						<li><a href="#">Sair</a></li>
 					</ul>
 				</nav>
 				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
 			</div>
 		</div>
 	</div>
-	<div class="app">
+	<div class="auth">
 		<div class="container">
-			<div class="app__inner">
-				<div class="app__menu">
-					<ul class="vMenu">
-						<li><a href="#" class="vMenu--active">Visão Geral</a></li>
-						<li><a href="#">Objetivos</a></li>
-						<li><a href="#">Editar Perfil</a></li>
-					</ul>
+			<div class="auth__inner">
+				<div class="auth__media">
+					<img src="./images/undraw_Reg.svg">
 				</div>
-				<div class="app__main">
-					<div class="text-container">
-						<h3 class="app__main__title">Bem vindo(a) de volta!</h3>
-						<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
-					</div>
+				<div class="auth__auth">
+					<h1 class="auth__title">Cadastre-se</h1>
+					<p>Coloque algumas informações sobre você para que a gente possa te ajudar :)</p>
+					<form method='post' action="/example" autocompelete="new-password" role="presentation" class="form">
+						<input name="name" class="fakefield">
+						<label>Nome</label>
+						<input type="text" name="name" id='name' placeholder="Seu nome completo">
+						<input name="date" class="fakefield">
+						<input name="email" class="fakefield">
+						<label>E-mail</label>
+						<input type="text" name="email" id='email' placeholder="Email">
+						<label>Senha</label>
+						<input type="password" name="password" id='suasenha' placeholder="Senha" autocomplete="off">
+						<button type='submit' class="button button__accent">Cadastrar</button>
+					</form>
 				</div>
 			</div>
 		</div>
