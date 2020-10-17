@@ -601,13 +601,17 @@ select {
   justify-content: space-between;
   height: 60px;
   color: #fff;
-  transition: 0.7s; }
+  transition: 0.7s;
+  
+ }
 
 .navbar__logo {
   font-size: 1.325rem;
   transition: 0;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none; 
+  
+}
 
 .navbar__menu {
   display: none; }
@@ -1243,3 +1247,4 @@ li a:hover{
   background-color: #65b53d;
   color: white; 
 }
+
