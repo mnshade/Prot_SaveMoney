@@ -31,12 +31,12 @@
 				<div class="auth__auth">
 					<h1 class="auth__title">Login</h1>
 					<p>Entre com seu e-mail e senha:</p>
-					<form method='post' action="/example" autocompelete="new-password" role="presentation" class="form">
+					<form method="get" action="php/login.php" autocompelete="new-password" role="presentation" class="form" >
 						<input name="email" class="fakefield">
 						<label>E-mail</label>
-						<input type="text" name="email" id='email' placeholder="seuemail@email.com">
+						<input type="text" name="e_mail" id='email' placeholder="seuemail@email.com">
 						<label>Senha</label>
-						<input type="password" name="password" id='suasenha' placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="off">
+						<input type="password" name="senha" id='suasenha' placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="off">
 						<button type='submit' class="button button__accent">Entrar</button>
 						<a href="cadastro.html" button type='submit' class="button button__accent">Cadastrar</button>
 						<a href=""><h6 class="left-align">Esqueceu sua senha?</h6></a>

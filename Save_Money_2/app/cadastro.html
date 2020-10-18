@@ -31,8 +31,8 @@
 				</div>
 				<div class="auth__auth">
 					<h1 class="auth__title">Cadastre-se</h1>
-					<p>Coloque algumas informações sobre você para que a gente possa te ajudar :)</p>
-					<form method='post' action="/example" autocompelete="new-password" role="presentation" class="form">
+					<p>Para realizar o cadastro digite os seus dados :)</p>
+					<form method="get" action="php/cadastro.php" autocompelete="new-password" role="presentation" class="form">
 						<input name="name" class="fakefield">
 						<label>Nome</label>
 						<input type="text" name="name" id='name' placeholder="Seu nome completo">
@@ -40,6 +40,10 @@
 						<input name="email" class="fakefield">
 						<label>E-mail</label>
 						<input type="text" name="email" id='email' placeholder="Email">
+						<label>Data de Nascimento</label>
+						<input type="date" name="data_nascimento" />
+						<label>CPF</label>
+						<input type="text" name="cpf" id='cpf' placeholder="000000000-00">
 						<label>Senha</label>
 						<input type="password" name="password" id='suasenha' placeholder="Senha" autocomplete="off">
 						<button type='submit' class="button button__accent">Cadastrar</button>
