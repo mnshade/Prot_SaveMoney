@@ -1,7 +1,13 @@
+<?php
+
+	session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
-	<meta class="utf-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>SaveMoney - Login</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -31,15 +37,15 @@
 				<div class="auth__auth">
 					<h1 class="auth__title">Login</h1>
 					<p>Entre com seu usuário e senha:</p>
-					<form method='post' action="/example" autocompelete="new-password" role="presentation" class="form">
+					<form method="POST" action="../Controller/login.php" autocompelete="new-password" role="presentation" class="form">
 						<input name="user" class="fakefield">
 						<label>Usuário</label>
 						<input type="text" name="user" id="user" placeholder="Seu usuário">
 						<label>Senha</label>
 						<input type="password" name="password" id='suasenha' placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="off">
 						<button type='submit' class="button button__accent">Entrar</button>
-						<a href="cadastro.html" button type='submit' class="button button__accent">Cadastrar</button>
-						<a href=""><h6 class="left-align">Esqueceu sua senha?</h6></a>
+						<button type='submit' class="button button__accent">Cadastrar</button>
+						<button ><h6 class="left-align">Esqueceu sua senha?</h6></button>
 					</form>
 				</div>
 			</div>
