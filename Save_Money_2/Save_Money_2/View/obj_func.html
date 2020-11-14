@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 	<head>
-		<meta charset="utf-8">
+		<meta class="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>SaveMovey - Plataforma</title>
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -25,13 +25,7 @@
 						<div class="app__menu">
 							<ul class="vMenu">
 								<li><a href="dashboard.html">Inicio</a></li>
-								<li><a href="#" class="vMenu--active">Visão Geral</a></li>
-								<li><a href="poupanca.html">Poupança</a>
-									<ul>
-										<li><a href="poupanca_depositar.html">Depositar</a></li><br>
-										<li><a href="poupanca_retirada.html">Retirada</a></li><br>
-									</ul>
-								</li>
+								<li><a href="#" class="vMenu--active">Visão Geral</a></li>						
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
 										<li><a href="criar_sonho.html">Criar Sonho</a></li><br>
@@ -52,34 +46,38 @@
 						</div>
 						<div class="app__main">
 							<div class="text-container">
-								<h3 class="app__main__title">Bem vindo(a) de volta!</h3>
-								<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
-								<div class="card-deck">
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Poupança</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="poupanca.html"><button>Acessar</button></a> </small></p>
-									  </div>
-									</div>
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Sonhos</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="sonho.html"><button>Acessar</button></a> </small></p>
-									  </div>
-									</div>
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Total</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-									  </div>
-									</div>
-								  </div>
+								<h3 class="app__main__title">Escolha um opção</h3>
+								<p></p>
+								<h3 class="app__main__title">Creditar</h3>
+								<form>
+									<label for="creditar">Valor</label>								  
+									<input type="number" id="creditar" placeholder="R$ 0,00" required="required" name="creditar" />									
+									<label for="CREDITAR_OPS">Escolha seu objetivo</label>
+									<select class="form-control" id="CREDITAR_OPS">
+										<option>VIAJAR</option>
+										<option>CARRO</option>
+										<option>BARCO</option>
+										<option>PC GAMER</option>
+										<option>PS5</option>
+									  </select>
+									  <input type="submit" class="enviar button" onclick="Enviar();" value="Enviar" />									
+								</form>
+
+								<hr>
+								<h3 class="app__main__title">Debitar</h3>
+								<form>
+									<label for="debitar">Valor</label>								  
+									<input type="number" id="debitar" placeholder="R$ 0,00" required="required" name="debitar" />									
+									<label for="DEBITAR_OPS">Escolha seu objetivo</label>
+									<select class="form-control" id="DEBITAR_OPS">
+										<option>VIAJAR</option>
+										<option>CARRO</option>
+										<option>BARCO</option>
+										<option>PC GAMER</option>
+										<option>PS5</option>
+									  </select>
+									  <input type="submit" class="enviar button" onclick="Enviar();" value="Enviar" />									
+								</form>
 							
 							</div>
 						</div>

@@ -11,10 +11,10 @@
 
             $sql = $pdo->prepare('select EmailUsuario, SenhaUsuario from Usuario where usr = :usr and email = :email');
             $sql->execute(array('usr' => $user, 'password'=> $password));
-            
+
         }
 
-        public function Logou(){
+        public function Logout(){
 
 
         }
