@@ -51,25 +51,21 @@
 							</ul>
 						</div>
 						<div class="app__main">
-							<div class="text-container">
-								<h3 class="app__main__title">Bem vindo(a) de volta!</h3>
-								<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
-								<div class="card text-center">
-									<div class="card-header">
-									  Editar suas informações
-									</div>
-									<div class="card-body">
-									  <h5 class="card-title">Special title treatment</h5>
-									  <p class="card-text">Mostra valor, com a saída e entrada</p>
-									  <a href="criar_sonho.html" class="btn btn-success">Criar Sonho</a>
-									  <a href="editar_sonho.html" class="btn btn-success">Editar Sonho</a>
-									  <a href="depositar_sonho.html" class="btn btn-success">Depositar</a>
-									  <a href="retirar_sonho.html" class="btn btn-success">Retirada</a>
-									</div>
-									<div class="card-footer text-muted">
-									  O seu dinheiro e o futuro
-									</div>
-								  </div>
+							<div class="text-container">								
+								<h1>Criei o seu sonho</h1>
+								<form>
+									<label for="sonho">Sonho</label>								  
+									<input type="text" id="sonho_id" placeholder="Nome do Sonho" required="required" name="sonho" />									
+									<label for="tempo_sonho">Tempo</label>
+									<input type="date" id="tempo" placeholder="12 meses" name="tempo_sonho" />									
+									<label for="valor_sonho">Quanto por mês</label>
+									<input type="number" id="valor" placeholder="R$ 100,00" name="Valor" />
+									
+								  
+									<textarea placeholder="Deixe sua opnião"></textarea>
+								  
+									<input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+								  </form>
 							
 							</div>
 						</div>
