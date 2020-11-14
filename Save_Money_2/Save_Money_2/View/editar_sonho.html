@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 	<head>
-		<meta class="utf-8">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>SaveMovey - Plataforma</title>
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -45,15 +45,25 @@
 							</ul>
 						</div>
 						<div class="app__main">
-							<div class="text-container">
+							<div class="form-group">
 								<h1>Criei o seu sonho</h1>
 								<form>
 									<label for="sonho">Nome</label>								  
-									<input type="text" id="sonho_id" placeholder="Nome do Sonho" required="required" name="sonho" />									
-									<label for="tempo_inicio">Tempo de início</label>
-									<input type="date" id="tempo_inicio" placeholder="12 meses" name="tempo_inicio" />
-									<label for="tempo_termino">Tempo de término</label>
-									<input type="date" id="tempo_termino" placeholder="12 meses" name="tempo_termino" />									
+									<input type="text" id="sonho_id" placeholder="Nome do Sonho" required="required" name="sonho" />	
+									
+									<div class="row">
+										<div class="col-sm">
+											<label for="tempo_inicio">Tempo de início</label>
+											<input type="date" id="tempo_inicio" placeholder="12 meses" name="tempo_inicio" />
+										</div>
+										<div class="col-sm">
+											<label for="tempo_termino">Tempo de término</label>
+											<input type="date" id="tempo_termino" placeholder="12 meses" name="tempo_termino" />
+										</div>
+									  </div>
+									
+									
+																		
 									<label for="valor_sonho">Quanto por mês</label>
 									<input type="number" id="valor" placeholder="R$ 100,00" name="Valor" />							
 									<input type="submit" class="enviar button" onclick="Enviar();" value="Enviar" />

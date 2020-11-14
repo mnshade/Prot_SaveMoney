@@ -1,6 +1,6 @@
 <?php
 
-    require '../Model/Connection.php';
+    require '../Model/User.php';
 
     $user = $_POST['user'];
     $password = $_POST['password'];
@@ -9,10 +9,9 @@
         header("Location: ../View/login.php");
         $_SESSION['msg'] = "Algum campo está vazio";
     }else{
-        $conn = new Connetction();
+        $usr = new User();
+        $user->Login($user, $password);
 
-        $returno = $conn->Connect();
-
-        echo $retorno;
+        // echo $retorno;
     }
 
