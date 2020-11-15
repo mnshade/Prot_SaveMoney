@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 	<head>
-		<meta class="utf-8">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>SaveMovey - Plataforma</title>
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -14,7 +14,7 @@
 				<nav class="nav__mobile"></nav>
 				<div class="container">
 					<div class="navbar__inner">
-						<a href="index.html" class="navbar__logo">SaveMoney</a>						
+						<a href="dashboard.html" class="navbar__logo">SaveMoney</a>						
 						<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
 					</div>
 				</div>
@@ -24,8 +24,8 @@
 					<div class="app__inner">
 						<div class="app__menu">
 							<ul class="vMenu">
-								<li><a href="dashboard.html">Inicio</a></li>
-								<li><a href="#" class="vMenu--active">Visão Geral</a></li>
+								<li><a>Inicio</a></li>
+								<li><a href="dashboard.html" class="vMenu--active">Visão Geral</a></li>
 								<li><a href="poupanca.html">Poupança</a>
 									<ul>
 										<li><a href="poupanca_depositar.html">Depositar</a></li><br>
@@ -34,8 +34,8 @@
 								</li>
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
-										<li><a href="criar_sonho.html">Criar Sonho</a></li><br>
-										<li><a href="editar_sonho.html">Editar Sonho</a></li><br>
+										<li><a href="criar_objetivo.html">Criar Sonho</a></li><br>
+										<li><a href="listar_objetivos.html">Editar Sonho</a></li><br>
 										<li><a href="depositar_sonho.html">Depositar</a></li><br>
 										<li><a href="retirar_sonho.html">Retirada</a></li><br>
 									</ul>
@@ -52,35 +52,23 @@
 						</div>
 						<div class="app__main">
 							<div class="text-container">
-								<h3 class="app__main__title">Bem vindo(a) de volta!</h3>
-								<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
-								<div class="card-deck">
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Poupança</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="poupanca.html"><button>Acessar</button></a> </small></p>
-									  </div>
-									</div>
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Sonhos</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="sonho.html"><button>Acessar</button></a> </small></p>
-									  </div>
-									</div>
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Total</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-									  </div>
-									</div>
-								  </div>
-							
+								<h3 class="app__main__title">Lista do seus Objetivos</h3>
+								<p>Logo abaixo está listado seus objetivos.</p>
+								<div class="container-fluid border rounded shadow">
+									<table class="table">
+										<thead>
+										  <tr>
+											<th scope="col">ID</th>
+											<th scope="col">Nome</th>
+											<th scope="col">Valor</th>
+											<th scope="col">Data Início</th>
+											<th scope="col">Data Término</th>
+										  </tr>
+										</thead>
+										<tbody>
+										</tbody>
+									  </table>
+								</div>							
 							</div>
 						</div>
 						

@@ -14,18 +14,18 @@
 				<nav class="nav__mobile"></nav>
 				<div class="container">
 					<div class="navbar__inner">
-						<a href="../../" class="navbar__logo">SaveMoney</a>						
+						<a href="dashboard.html" class="navbar__logo">SaveMoney</a>						
 						<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
 					</div>
 				</div>
 			</div>
 			<div class="app">
 				<div class="container">
-					<div class="app__inner">
-						<div class="app__menu">
+					<div class="app__inner mt-3">
+						<div class="app__menu ">
 							<ul class="vMenu">
-								<li><a href="dashboard.html">Inicio</a></li>
-								<li><a href="#" class="vMenu--active">Visão Geral</a></li>
+								<li><a>Inicio</a></li>
+								<li><a href="dashboard.html" class="vMenu--active">Visão Geral</a></li>
 								<li><a href="poupanca.html">Poupança</a>
 									<ul>
 										<li><a href="poupanca_depositar.html">Depositar</a></li><br>
@@ -34,8 +34,8 @@
 								</li>
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
-										<li><a href="criar_sonho.html">Criar Sonho</a></li><br>
-										<li><a href="editar_sonho.html">Editar Sonho</a></li><br>
+										<li><a href="criar_objetivo.html">Criar Sonho</a></li><br>
+										<li><a href="listar_objetivos.html">Editar Sonho</a></li><br>
 										<li><a href="depositar_sonho.html">Depositar</a></li><br>
 										<li><a href="retirar_sonho.html">Retirada</a></li><br>
 									</ul>
@@ -52,35 +52,29 @@
 						</div>
 						<div class="app__main">
 							<div class="text-container">
-								<h3 class="app__main__title">Bem vindo(a) de volta!</h3>
-								<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
-								<div class="card-deck">
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Poupança</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="poupanca.html"><button>Acessar</button></a> </small></p>
+								<h3 class="app__main__title">Cadastro de Objetivo</h3>
+								<p>Digite os dados do seu novo Objetivo!</p>
+								<form method="POST" action="../Controller/cadastro_objetivo.php">
+									<div class="form-group">
+										<label for="objetivo">Nome do Objetivo</label>
+										<input type="text" class="form-control" name="objetivo" id="objetivo" placeholder="Insira o nome do Objetivo">
+									</div>
+									<div class="form-row">
+									  <div class="form-group col-sm-4">
+										<label for="data_inicio">Data de Inicio</label>
+										<input type="date" class="form-control" id="data_inicio" name="data_inicio">
+									  </div>
+									  <div class="form-group col-sm-4">
+										<label for="data_final">Data Final</label>
+										<input type="date" class="form-control" id="data-final" name="data-final">
+									  </div>
+									  <div class="form-group col-sm-4">
+										<label for="valor">Valor</label>
+										<input type="text" class="form-control" id="valor" name="Valor">
 									  </div>
 									</div>
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Sonhos</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="sonho.html"><button>Acessar</button></a> </small></p>
-									  </div>
-									</div>
-									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
-									  <div class="card-body">
-										<h5 class="card-title">Total</h5>
-										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-									  </div>
-									</div>
-								  </div>
-							
+									<button type="submit" class="btn btn-primary">Cadastrar</button>
+								</form>							
 							</div>
 						</div>
 						

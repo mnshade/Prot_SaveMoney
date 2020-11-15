@@ -1,7 +1,17 @@
+<?php
+
+	session_start();
+
+	if(isset($_SESSION['user'])){
+		header('Location: login.php');
+	}	
+
+?>
+
 <!DOCTYPE html>
 <html lang='pt-br'>
 	<head>
-		<meta class="utf-8">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>SaveMovey - Plataforma</title>
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -14,8 +24,10 @@
 				<nav class="nav__mobile"></nav>
 				<div class="container">
 					<div class="navbar__inner">
-						<a href="index.html" class="navbar__logo">SaveMoney</a>						
-						<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+						<a href="../" class="navbar__logo">SaveMoney</a>						
+						<div class="navbar__menu-mob">
+							<a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
+						</a></div>
 					</div>
 				</div>
 			</div>
@@ -34,8 +46,8 @@
 								</li>
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
-										<li><a href="criar_sonho.html">Criar Sonho</a></li><br>
-										<li><a href="editar_sonho.html">Editar Sonho</a></li><br>
+										<li><a href="criar_objetivo.php">Criar Objetivos</a></li><br>
+										<li><a href="listar_objetivos.php">Listar Objetivos</a></li><br>
 										<li><a href="depositar_sonho.html">Depositar</a></li><br>
 										<li><a href="retirar_sonho.html">Retirada</a></li><br>
 									</ul>

@@ -9,11 +9,11 @@
             $conn = new Connection();
             $pdo = $conn->Connect();
 
-            $sql = $pdo->prepare('select EmailUsuario, SenhaUsuario from Usuario where usr = :usr and email = :email');
+            $sql = $pdo->prepare('    select EmailUsuario, SenhaUsuario from Usuario where EmailUsuario = :usr && SenhaUsuario = :password');
             $sql->execute(array('usr' => $user, 'password'=> $password));
-            $full_name = $sql->fetch();
+            $email = $sql->fetch();
 
-            $return = array('rowCount' => $sql->rowCount(), 'full_name' => $full_name['full_name']);
+            $return = array('rowCount' => $sql->rowCount(), 'full_name' => $email['EmailUsuario']);
             
             return $return;
 

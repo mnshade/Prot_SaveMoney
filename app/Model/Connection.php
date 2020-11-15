@@ -17,9 +17,9 @@
 
                 }
 
-                // return self::$pdo;
+                return self::$pdo;
 
-                return "Conectado a {$env['database']} em {$env['host']} com sucesso.";
+                // return "Conectado a {$env['database']} em {$env['host']} com sucesso.";
 
             } catch (PDOException $pe) {
 
