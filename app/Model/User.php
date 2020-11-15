@@ -32,7 +32,7 @@
             $sql =$pdo->prepare('insert into Usuario (NomeUsuario, EmailUsuario, SenhaUsuario) values (:nome, :email, :senha)');
 
             if($sql->execute(array('nome' => $nome, 'email' => $email, 'password' => $password))){
-                
+            
             }
 
         }
