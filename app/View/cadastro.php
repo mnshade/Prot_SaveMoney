@@ -38,7 +38,7 @@
 						<label>E-mail</label>
 						<input type="text" name="email" id='email' placeholder="seuemail@email.com">
 						<label>Senha</label>
-						<input type="password" name="password" id='suasenha' placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="off">
+						<input type="password" name="password" id='suasenha' placeholder="Sua Senha" autocomplete="off">
 						<button type='submit' class="button button__accent">Cadastrar</button>
 					</form>
 				</div>
