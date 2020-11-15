@@ -32,17 +32,9 @@
 				<div class="auth__auth">
 					<h1 class="auth__title">Cadastre-se</h1>
 					<p>Coloque algumas informações sobre você para que a gente possa te ajudar :)</p>
-					<form method='post' action="/example" autocompelete="new-password" role="presentation" class="form">
-						<input name="user" class="fakefield">
-						<label>Usuário</label>
-						<input type="text" name="user" id='user' placeholder="Seu usuário">
-						<input name="user" class="fakefield">
+					<form method='POST' action="../Controller/cadastrar.php" role="presentation" class="form">
 						<label>Nome</label>
 						<input type="text" name="name" id='name' placeholder="Seu nome completo">
-						<input name="date" class="fakefield">
-						<label>Data de nascimento</label>
-						<input type="date" name="nasc" id='nasc' placeholder="Data de nascimento">
-						<input name="email" class="fakefield">
 						<label>E-mail</label>
 						<input type="text" name="email" id='email' placeholder="seuemail@email.com">
 						<label>Senha</label>

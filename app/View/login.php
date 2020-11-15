@@ -44,7 +44,7 @@
 						<label>Senha</label>
 						<input type="password" name="password" id='suasenha' placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="off">
 						<button type='submit' class="button button__accent">Entrar</button>
-						<button type='submit' class="button button__accent">Cadastrar</button>
+						<a href="cadastro.php" class="button button__accent">Cadastrar</a>
 						<button ><h6 class="left-align">Esqueceu sua senha?</h6></button>
 					</form>
 				</div>

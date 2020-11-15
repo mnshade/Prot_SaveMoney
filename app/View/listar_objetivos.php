@@ -34,8 +34,8 @@
 								</li>
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
-										<li><a href="criar_objetivo.html">Criar Sonho</a></li><br>
-										<li><a href="listar_objetivos.html">Editar Sonho</a></li><br>
+										<li><a href="criar_objetivo.php">Criar Sonho</a></li><br>
+										<li><a href="#">Listar Sonho</a></li><br>
 										<li><a href="depositar_sonho.html">Depositar</a></li><br>
 										<li><a href="retirar_sonho.html">Retirada</a></li><br>
 									</ul>
