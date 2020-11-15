@@ -2,7 +2,7 @@
 
     require 'Connection.php';
 
-    class Objetivos{
+    class Objetivo{
 
         public function Create(){
 
