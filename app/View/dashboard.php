@@ -24,7 +24,7 @@
 				<nav class="nav__mobile"></nav>
 				<div class="container">
 					<div class="navbar__inner">
-						<a href="../" class="navbar__logo">SaveMoney</a>						
+						<a href="#" class="navbar__logo">SaveMoney</a>						
 						<div class="navbar__menu-mob">
 							<a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
 						</a></div>
@@ -32,43 +32,108 @@
 				</div>
 			</div>
 			<div class="app">
-				<div class="container">
+				<div class="container my-4">
 					<div class="app__inner">
-						<div class="app__menu">
-							<ul class="vMenu">
-								<li><a href="dashboard.html">Inicio</a></li>
-								<li><a href="#" class="vMenu--active">Visão Geral</a></li>
-								<li><a href="poupanca.html">Poupança</a>
+						<div class="app__menu m-0 py-0">
+							<ul class="vMenu pt-4">
+								<li>
+									<p>Inicio</p>
+									<ul>										
+										<li><a href="#">Visão Geral</a></li>
+									</ul>
+								</li>									
+								<li>
+									<p class="bolder">Poupança</p>
 									<ul>
-										<li><a href="poupanca_depositar.html">Depositar</a></li><br>
-										<li><a href="poupanca_retirada.html">Retirada</a></li><br>
+										<li><a href="criar_objetivo.php">Criar Objetivo</a></li>
+										<li><a href="listar_objetivo">Listar Objetivo</a></li>
 									</ul>
 								</li>
-								<li><a href="sonho.html">Sonho</a>
+								<li>
+									<p class="bolder">Objetivo</p>
 									<ul>
-										<li><a href="criar_objetivo.php">Criar Objetivos</a></li><br>
-										<li><a href="listar_objetivos.php">Listar Objetivos</a></li><br>
-										<li><a href="depositar_sonho.html">Depositar</a></li><br>
-										<li><a href="retirar_sonho.html">Retirada</a></li><br>
+										<li><a href="criar_objetivo.php">Criar Objetivos</a></li>
+										<li><a href="listar_objetivos.php">Listar Objetivos</a></li>
+										
 									</ul>
 								</li>
-								<li><a href="editar_perfil.html">Editar Perfil</a>
-									<ul>
-										<li><a href="info_perfil.html">Informações</a></li><br>
-										<li><a href="seguranca_perfil.html">Segurança</a></li><br>
-										<li><a href="atendimento.html">Atendimento ao Cliente</a></li><br>
-									</ul>
-								</li>
-								<li>SAIR</li>
 							</ul>
 						</div>
 						<div class="app__main">
-							<div class="text-container">
-								<h3 class="app__main__title">Bem vindo(a) de volta!</h3>
+							<div class="text-container ml-3">
+								<h2 class="app__main__title">Bem vindo(a) de volta!</h3>
 								<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
+								<hr>
+								<div class="container-fluid">
+									<div class="form-row">
+										<div class="col-sm border-right">
+											<h4 class="text-success m-0 p-0">Seu saldo</h4>
+											<h5 class="display-2 m-0 p-0 text-success">R$00,00</h5>
+											
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+											Depositar
+											</button>
+
+											<!-- Modal -->
+											<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h2 class="modal-title" id="exampleModalLabel">Depósito</h2>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+													<div class="modal-body">
+														<form action="" method="POST"></form>
+													</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-success">Depositar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="col-sm ">
+											<h4 class="text-success m-0 p-0 pl-2 ml-2">Investido</h4>
+											<h5 class="display-2 m-0 p-0 pl-2 ml-2 text-success">R$00,00</h5>
+
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+											Invertir
+											</button>
+
+											<!-- Modal -->
+											<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h2 class="modal-title" id="exampleModalLabel">Investimento</h2>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+													<div class="modal-body">
+														<form action="" method="POST"></form>
+													</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-success">Depositar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>							
+								</div>
+								<hr class="mb-4">
+								
 								<div class="card-deck">
 									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
+									  <img src="images/poupanca.png" class="card-img-top p-3" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Poupança</h5>
 										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
@@ -76,7 +141,7 @@
 									  </div>
 									</div>
 									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
+									  <img src="images/objetivo2.png" class="card-img-top p-3" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Sonhos</h5>
 										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
@@ -84,28 +149,28 @@
 									  </div>
 									</div>
 									<div class="card">
-									  <img src="..." class="card-img-top" alt="...">
+									  <img src="images/money4.png" class="card-img-top p-3" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Total</h5>
 										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
 										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 									  </div>
 									</div>
-								  </div>
+								</div>
 							
 							</div>
 						</div>
+					</div>
+				</div>
 						
 								
 							
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-			<footer>
-				<!-- jQuery and JS bundle w/ Popper.js -->
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-				<script src='js/app.min.js'></script>
-			</footer>
+			<!-- jQuery and JS bundle w/ Popper.js -->
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+			<script src='js/app.min.js'></script>
+		
 		
 		
 	</body>
