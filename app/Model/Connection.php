@@ -2,7 +2,7 @@
 
     class Connection {
 
-        public static $pdo;
+        private static $pdo;
 
         public function Connect(){
 

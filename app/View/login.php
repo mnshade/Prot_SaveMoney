@@ -37,12 +37,20 @@
 				<div class="auth__auth">
 					<h1 class="auth__title">Login</h1>
 					<p>Entre com seu usuário e senha:</p>
+					<?php
+
+						if(isset($_SESSION['msg'])){
+							echo "<div style='color: red;'>{$_SESSION['msg']}</div>";
+							session_unset();
+						}
+
+					?>
 					<form method="POST" action="../Controller/login.php" autocompelete="new-password" role="presentation" class="form">
 						<input name="user" class="fakefield">
 						<label>E-mail ou Usuário</label>
 						<input type="text" name="email" id="email" placeholder="Seu usuário">
 						<label>Senha</label>
-						<input type="password" name="password" id='suasenha' placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" autocomplete="off">
+						<input type="password" name="password" id='suasenha' placeholder="Sua senha" autocomplete="off">
 						<button type='submit' class="button button__accent">Entrar</button>
 						<a href="cadastro.php" class="button button__accent">Cadastrar</a>
 						<button ><h6 class="left-align">Esqueceu sua senha?</h6></button>

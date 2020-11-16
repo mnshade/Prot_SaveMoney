@@ -8,19 +8,21 @@
     $password = $_POST['password'];
 
     if(empty($email) || empty($password)){
+        $_SESSION['msg'] = "Algum campo está vazio. Preencha corretamento por favor.";
         header("Location: ../View/login.php");
-        $_SESSION['msg'] = "Algum campo está vazio";
     }else{
 
-        // var_dump($user, $password);
         $usr = new User();
         $retorno = $usr->Login($email, $password);
 
         // var_dump($retorno);
 
         if($retorno['rowCount'] === 1){
-            $_SESSION['user'] = $resultado['EmailUsuario'];
+            $_SESSION['user'] = $retorno['EmailUsuario'];
             header('Location: ../View/dashboard.php');
+        }else{
+            $_SESSION['msg'] = "Usuário ou senha incorreto. Prencha novamente.";
+            header('Location: ../View/login.php');
         }
         
     }

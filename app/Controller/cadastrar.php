@@ -7,12 +7,14 @@
     $password = $_POST['password'];
 
     if(empty($nome) || empty($email) || empty($password)){
-        $_SESSION['msg'] = 'Algum campo está vazio. Preencha novamente!';
-        header("Location: ../View/login.php");
+        $_SESSION['msg'] = 'Algum campo não está preenchido incorretamente. Prencha novamente.';
+        header("Location: ../View/cadastro.php");
     }
     else{
 
         $user = new User();
-        $user->Create($name, $email, $password);
+        $user->Create($nome, $email, $password);
+
+        // var_dump($user->Create($nome, $email, $password), $email);
 
     }
