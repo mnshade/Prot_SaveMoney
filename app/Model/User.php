@@ -11,11 +11,11 @@
             $conn = new Connection();
             $pdo = $conn->Connect();
 
-            $sql = $pdo->prepare('select EmailUsuario, SenhaUsuario from Usuario where EmailUsuario = :email && SenhaUsuario = :password');
+            $sql = $pdo->prepare('select UsuarioID, EmailUsuario, SenhaUsuario from Usuario where EmailUsuario = :email && SenhaUsuario = :password');
             $sql->execute(array('email' => $user, 'password'=> $password));
-            $email = $sql->fetch();
+            $ID = $sql->fetch();
 
-            $return = array('rowCount' => $sql->rowCount(), 'EmailUsuario' => $email['EmailUsuario']);
+            $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID']);
             
             return $return;
 
@@ -63,12 +63,29 @@
 
         public function Edit(){
 
-
+            session_unset();
+            session_destroy();
+            header("Location: ../View/Login.php");
+            
         }
 
-        public function Read(){
+        public function Read($id){            
+
+            $conn = new Connection();
+            $pdo = $conn->Connect();
+
+            $sql = $pdo->prepare('select * from usuario where UsuarioID = :id');
+            $sql->execute(array('id' => $id));
+
+            $resultado = $sql->fetchColumn(1);
+
+            // return $resultado['NomeUsuario'];
+
+            return $resultado;
 
             
+
+
         }
 
         public function Delete(){

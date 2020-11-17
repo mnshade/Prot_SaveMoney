@@ -4,7 +4,8 @@
 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
+
 
     if(empty($nome) || empty($email) || empty($password)){
         $_SESSION['msg'] = 'Algum campo não está preenchido incorretamente. Prencha novamente.';

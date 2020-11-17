@@ -18,7 +18,11 @@
         // var_dump($retorno);
 
         if($retorno['rowCount'] === 1){
-            $_SESSION['user'] = $retorno['EmailUsuario'];
+            $_SESSION['user'] = $retorno['ID'];
+            $_SESSION['nome'] = $usr->Read($retorno['ID']);
+
+            // var_dump($usr->Read($retorno['ID']));
+            
             header('Location: ../View/dashboard.php');
         }else{
             $_SESSION['msg'] = "Usuário ou senha incorreto. Prencha novamente.";
