@@ -72,6 +72,8 @@
 										<label for="valor">Valor</label>
 										<input type="text" class="form-control" id="valor" name="Valor">
 									  </div>
+									  <label for="valor">Descrição:</label>
+									  <textarea name="" id="" cols="4" rows="3"></textarea>
 									</div>
 									<button type="submit" class="btn btn-primary">Cadastrar</button>
 								</form>							
