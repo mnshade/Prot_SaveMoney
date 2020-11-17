@@ -15,7 +15,7 @@
             $sql->execute(array('email' => $user, 'password'=> $password));
             $ID = $sql->fetch();
 
-            $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID'], );
+            $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID'] );
             
             return $return;
 

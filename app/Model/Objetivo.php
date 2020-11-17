@@ -37,7 +37,7 @@
                 header("Location: ../View/criar_objetivo.php");
                 
             }
-            var_dump($resultado);
+            //var_dump($resultado);
             //echo "iniciando";
         }
 
