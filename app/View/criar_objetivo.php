@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang='pt-br'>
 	<head>
 		<meta charset="utf-8">
@@ -54,6 +55,13 @@
 							<div class="text-container">
 								<h3 class="app__main__title">Cadastro de Objetivo</h3>
 								<p>Digite os dados do seu novo Objetivo!</p>
+								<?PHP
+								if(isset($_SESSION['msg'])){
+							echo "<div style='color: green;'>{$_SESSION['msg']}</div>";
+							session_unset();
+						}
+?>
+
 								<form method="POST" action="../Controller/cadastro_objetivo.php">
 									<div class="form-group">
 										<label for="objetivo">Nome do Objetivo</label>
@@ -73,7 +81,7 @@
 										<input type="text" class="form-control" id="valor" name="Valor">
 									  </div>
 									  <label for="valor">Descrição:</label>
-									  <textarea name="" id="" cols="4" rows="3"></textarea>
+									  <textarea name="desc" id="" cols="4" rows="3"></textarea>
 									</div>
 									<button type="submit" class="btn btn-primary">Cadastrar</button>
 								</form>							
@@ -90,7 +98,5 @@
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 				<script src='js/app.min.js'></script>
 			</footer>
-		
-		
 	</body>
 </html>
