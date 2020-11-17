@@ -15,7 +15,7 @@
             $sql->execute(array('email' => $user, 'password'=> $password));
             $ID = $sql->fetch();
 
-            $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID']);
+            $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID'], );
             
             return $return;
 
@@ -42,13 +42,17 @@
 
                 $sql = $pdo->prepare('insert into Usuario (NomeUsuario, EmailUsuario, SenhaUsuario) values (:nome, :email, :password)');
 
-                $sql->execute(array('nome' => $nome, 'email' => $email, 'password' => $password));
+                $resultaod = $sql->execute(array('nome' => $nome, 'email' => $email, 'password' => $password));
 
                 // return $sql->fetch();
 
                 if(!$resultado){
-                    $_SESSION['user'] = 'Cadastro realizado com sucesso!';
-                    header("Location: ../View/dashboard.php");          
+                    $retorno = $this->Read('EmailUsuario', $email);
+                    $_SESSION['user'] = $retorno['UsuarioID'];
+                    $_SESSION['nome'] = $retorno['NomeUsuario'];
+                    header("Location: ../View/dashboard.php");   
+                    
+                    // var_dump($retorno);
                 }else{
                     $_SESSION['msg'] = 'Ocorreu algum erro. Tente mais tarde!';
                     header("Location: ../View/cadastro.php");
@@ -66,18 +70,18 @@
             session_unset();
             session_destroy();
             header("Location: ../View/Login.php");
-            
+
         }
 
-        public function Read($id){            
+        public function Read($campo, $id){            
 
             $conn = new Connection();
             $pdo = $conn->Connect();
 
-            $sql = $pdo->prepare('select * from usuario where UsuarioID = :id');
+            $sql = $pdo->prepare("select * from usuario where $campo = :id");
             $sql->execute(array('id' => $id));
 
-            $resultado = $sql->fetchColumn(1);
+            $resultado = $sql->fetch();
 
             // return $resultado['NomeUsuario'];
 

@@ -13,15 +13,16 @@
     }else{
 
         $usr = new User();
-        $retorno = $usr->Login($email, $password);
+        $retorno = $usr->Login($email, md5($password));
 
         // var_dump($retorno);
 
         if($retorno['rowCount'] === 1){
             $_SESSION['user'] = $retorno['ID'];
-            $_SESSION['nome'] = $usr->Read($retorno['ID']);
+            $resultado = $usr->Read('UsuarioID',$retorno['ID']);
+            $_SESSION['nome'] = $resultado['NomeUsuario'];
 
-            // var_dump($usr->Read($retorno['ID']));
+            // var_dump($usr->Read($retorno['ID']));            
             
             header('Location: ../View/dashboard.php');
         }else{

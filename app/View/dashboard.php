@@ -45,8 +45,8 @@
 								<li>
 									<p class="bolder">Poupança</p>
 									<ul>
-										<li><a href="criar_objetivo.php">Criar Objetivo</a></li>
-										<li><a href="listar_objetivos.php">Listar Objetivo</a></li>
+										<li><a href="#">Histórico de Depósito</a></li>
+										<li><a href="#"></a></li>
 									</ul>
 								</li>
 								<li>
@@ -61,7 +61,7 @@
 						</div>
 						<div class="app__main">
 							<div class="text-container ml-3">
-								<h2 class="app__main__title">Bem vindo(a) <?php echo $_SESSION['nome'];?> de volta!</h3>
+								<h2 class="app__main__title">Bem vindo(a) <span class="text-success"><?php echo $_SESSION['nome'];?></span> de volta!</h3>
 								<p>Logo abaixo segue seu planejamento referente ao mês atual.</p>
 								<hr>
 								<div class="container-fluid">
