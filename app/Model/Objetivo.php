@@ -20,8 +20,7 @@
             $this->descricao = $descricao;
             $this->id = $id;
         }
-        
-    
+            
         public function Create(){
             
             $conn = new Connection();
@@ -33,7 +32,7 @@
             $stmt = $pdo->prepare($sql);
             $resultado = $stmt->execute([$this->nome, $this->inicio, $this->fim, $this->valor, $this->descricao, $this->id]); //"Inserido com Sucesso" : "Erro o inserir" ;
             if($resultado){
-                $_SESSION['msg'] = "Inserido com Sucesso";
+                $_SESSION['msg'] = "Ojetivo Cadastrado com Sucesso !";
                 header("Location: ../View/criar_objetivo.php");
                 
             }
@@ -42,7 +41,7 @@
         }
 
         public function Read(){
-
+            
 
         }
 

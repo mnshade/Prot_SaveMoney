@@ -37,7 +37,7 @@
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
 										<li><a href="#">Criar Objetivo</a></li><br>
-										<li><a href="listar_objetivos.php">Editar Objetivo</a></li><br>
+										<li><a href="listar_objetivos.php">Meus Objetivos</a></li><br>
 										<li><a href="depositar_sonho.html">Depositar</a></li><br>
 										<li><a href="retirar_sonho.html">Retirada</a></li><br>
 									</ul>
@@ -57,10 +57,10 @@
 								<h3 class="app__main__title">Cadastro de Objetivo</h3>
 								<?PHP
 								if(isset($_SESSION['msg'])){
-									echo "<div class='alert alert-primary' role='alert' style='color: green;'>{$_SESSION['msg']}</div>";
-									session_unset();
-									
-								} 
+									//print_r($_SESSION);
+									echo "<div class='alert alert-primary' role='alert' style='color: green;'>{$_SESSION['msg']}</div>";								
+									//session_unset();
+								}							
 								?>
 								<p>Digite os dados do seu novo Objetivo!</p>
 								

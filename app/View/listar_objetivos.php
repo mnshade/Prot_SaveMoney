@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <html lang='pt-br'>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>SaveMovey - Plataforma</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -11,7 +13,7 @@
 	</head>
 	<body class="fadeIn">
 			<div class="navbar">
-				<nav class="nav__mobile"></nav>
+
 				<div class="container">
 					<div class="navbar__inner">
 						<a href="dashboard.html" class="navbar__logo">SaveMoney</a>						
@@ -34,8 +36,8 @@
 								</li>
 								<li><a href="sonho.html">Sonho</a>
 									<ul>
-										<li><a href="criar_objetivo.php">Criar Sonho</a></li><br>
-										<li><a href="#">Listar Sonho</a></li><br>
+										<li><a href="criar_objetivo.php">Criar Objetivo</a></li><br>
+										<li><a href="../Controller/listar_objetivos.php">Meus Objetivos</a></li><br>
 										<li><a href="depositar_sonho.html">Depositar</a></li><br>
 										<li><a href="retirar_sonho.html">Retirada</a></li><br>
 									</ul>
@@ -58,14 +60,28 @@
 									<table class="table">
 										<thead>
 										  <tr>
-											<th scope="col">ID</th>
-											<th scope="col">Nome</th>
+											<th scope="col">Título</th>
+											<th scope="col">Início</th>
+											<th scope="col">Fim</th>
+											<th scope="col">Descrição</th>	
 											<th scope="col">Valor</th>
-											<th scope="col">Data Início</th>
-											<th scope="col">Data Término</th>
+											<th scope="col">Ação</td>
+																		
 										  </tr>
 										</thead>
 										<tbody>
+											<tr>
+											
+												<td>Comprar carro</td>	
+												<td>10/09/2020</td>
+												<td>10/09/2020</td>
+												<td>um carrro 0km para ir para o trabalho sem maiores problemas</td>
+												<td>R$2000</td>
+												<td><a href="#" style="color:orange;text-decoration:none">Editar</a>|<a href="?listar_objetivos.php" style="color:red;text-decoration:none">Deletar</a>
+												
+												</td>
+				
+											</tr>
 										</tbody>
 									  </table>
 								</div>							
