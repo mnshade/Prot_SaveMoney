@@ -73,23 +73,20 @@
 
         }
 
-        public function Read($campo, $id){            
+        public function Read($param, $id){            
 
             $conn = new Connection();
             $pdo = $conn->Connect();
 
-            $sql = $pdo->prepare("select * from usuario where $campo = :id");
+            $sql = $pdo->prepare("select * from usuario where $param = :id");
             $sql->execute(array('id' => $id));
 
             $resultado = $sql->fetch();
 
             // return $resultado['NomeUsuario'];
 
-            return $resultado;
-
+            return $resultado;  
             
-
-
         }
 
         public function Delete(){

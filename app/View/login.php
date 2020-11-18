@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>SaveMoney - Login</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link rel='stylesheet' href='css/style.css' />
 </head>
 <body class="fadeIn">
@@ -37,24 +38,24 @@
 				<div class="auth__auth">
 					<h1 class="auth__title">Login</h1>
 					<p>Entre com seu usuário e senha:</p>
-					<?php
-
-						if(isset($_SESSION['msg'])){
-							echo "<div style='color: red;'>{$_SESSION['msg']}</div>";
-							session_unset();
-						}
-
-					?>
-					<form method="POST" action="../Controller/login.php" autocompelete="new-password" role="presentation" class="form">
+					<form method="POST" action="../Controller/login_usuario.php" autocompelete="new-password" role="presentation" class="form">
 						<input name="user" class="fakefield">
 						<label>E-mail ou Usuário</label>
 						<input type="text" name="email" id="email" placeholder="Seu usuário">
 						<label>Senha</label>
 						<input type="password" name="password" id='suasenha' placeholder="Sua senha" autocomplete="off">
+						<?php
+
+							if(isset($_SESSION['msg'])){
+								echo "<div class='alert alert-danger' role='alert'>{$_SESSION['msg']}</div>";
+								session_unset();
+							}
+
+						?>
 						<button type='submit' class="button button__accent">Entrar</button>
 						<a href="cadastro.php" class="button button__accent">Cadastrar</a>
 						<button ><h6 class="left-align">Esqueceu sua senha?</h6></button>
-					</form>
+					</form>					
 				</div>
 			</div>
 		</div>
