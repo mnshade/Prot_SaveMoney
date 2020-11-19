@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<link rel='stylesheet' href='css/style.css' />
 	</head>
-	<body class="fadeIn" onload="carregar();">
+	<body class="fadeIn">
 			<div class="navbar">
 				<nav class="nav__mobile"></nav>
 				<div class="container">
@@ -35,7 +35,7 @@
 				<div class="container my-4">
 					<div class="app__inner">
 						<div class="app__menu m-0 py-0">
-							<ul class="vMenu pt-4">
+							<ul class="vMenu pt-4 text-centered">
 								<li>
 									<p>Inicio</p>
 									<ul>										
@@ -86,7 +86,7 @@
 									<div class="form-row" id="valores">
 										<div class="col-sm border-right">
 											<h4 class="text-success m-0 p-0">Seu saldo</h4>
-											<h5 class="display-2 m-0 p-0 text-success">R$00,00</h5>
+											<h5 class="display-3 m-0 p-0 text-success" id="deposito">R$00,00</h5>
 											
 											<!-- Button trigger modal -->
 											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#depositar">
@@ -187,35 +187,42 @@
 							
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 			<!-- jQuery and JS bundle w/ Popper.js -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="js/jquery.js"></script>
+			<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 			<script src='js/app.min.js'></script>
 		
 			<script>
 
-				function carregar(){
+				$(function(){
 
-					var usuario = {
+					$(document).ready(function(){
+					
+						var usuario = {
 							'id': '<?php echo $_SESSION['user']?>',
 							'param': 'Usuario_UsuarioID'
 						}
+							
+						var dados = JSON.stringify(usuario);
 						
-					var dados = JSON.stringify(usuario);
-					
-					$.ajax({
-						url: 'read_deposito.php',
-						type: 'POST',
-						data: {data: dados},
-						success: function(result){
-							console.log(result)
-						},
-						error: function(jqXHR, textStatus, errorThrown) {
-						// Retorno caso algum erro ocorra
-						}
+						$.ajax({
+							url: '../Controller/read_deposito.php',
+							type: 'POST',
+							data: {data: dados},
+							success: function(result){
+								// console.log(result)
+								// $('#deposito').prependTo(data['SUM(DepositoEconomiaUsuario)']);
+								$("#deposito").text("R$"+result+',00');
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								console.log(textStatus, erroThorwn);
+							}
+
+						});	
 
 					});
-				}			
+
+				});			
 
 			</script>
 		

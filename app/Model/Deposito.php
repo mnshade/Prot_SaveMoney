@@ -23,12 +23,12 @@
             $conn = new Connection();
             $pdo = $conn->Connect();
 
-            $sql = $pdo->prepare("select * from depositousuario where $param = :id");
-            $resutaldo = $sql->execute(array('id' => $id));
+            $sql = $pdo->prepare("select SUM(DepositoEconomiaValor) from depositousuario WHERE $param= :id");
+            $sql->execute(array('id' => $id));
 
-            $retorno = $resultado->fetch();
+            $retorno = $sql->fetch();
 
-            return $retorno;
+            return $retorno[0];
             
         }
 
