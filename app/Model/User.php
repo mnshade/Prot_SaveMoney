@@ -13,11 +13,15 @@
 
             $sql = $pdo->prepare('select UsuarioID, EmailUsuario, SenhaUsuario from Usuario where EmailUsuario = :email && SenhaUsuario = :password');
             $sql->execute(array('email' => $user, 'password'=> $password));
-            $ID = $sql->fetch();
-
-            $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID'] );
             
-            return $return;
+            if($ID = $sql->fetch()){
+                $return = array('rowCount' => $sql->rowCount(), 'ID' => $ID['UsuarioID'] );
+            
+                return $return;
+            }else
+                return 0;
+
+            // return $password;
 
         }
 

@@ -37,13 +37,15 @@
 				</div>
 				<div class="auth__auth">
 					<h1 class="auth__title">Login</h1>
+					<!-- -->
 					<p>Entre com seu usuário e senha:</p>
-					<form method="POST" action="../Controller/login_usuario.php" autocompelete="new-password" role="presentation" class="form">
+					<form>
 						<input name="user" class="fakefield">
 						<label>E-mail ou Usuário</label>
 						<input type="text" name="email" id="email" placeholder="Seu usuário">
 						<label>Senha</label>
-						<input type="password" name="password" id='suasenha' placeholder="Sua senha" autocomplete="off">
+						<input type="password" name="password" id='password' placeholder="Sua senha" autocomplete="off">
+						<div id="resposta"></div>
 						<?php
 
 							if(isset($_SESSION['msg'])){
@@ -52,14 +54,62 @@
 							}
 
 						?>
-						<button type='submit' class="button button__accent">Entrar</button>
+						<input type="button" id='enviar' class="button button__accent" value="Entrar">
 						<a href="cadastro.php" class="button button__accent">Cadastrar</a>
-						<button ><h6 class="left-align">Esqueceu sua senha?</h6></button>
+						<a><h6 class="left-align">Esqueceu sua senha?</h6></a>
 					</form>					
 				</div>
 			</div>
 		</div>
 	</div>
-<script src='js/app.min.js'></script>
 </body>
+	<script src='js/app.min.js'></script>
+	<script src='js/jquery.js'></script>
+	<script>
+
+		$('#enviar').click(function(){
+
+			var email = $('#email').val()
+			var password = $('#password').val()
+
+			if( (email==='') || (password==='')){
+				$('#resposta').html("<div class='alert alert-danger' role='alert'>Algum campo está vazio. Preencha corretamento por favor.</div>")
+			}else{
+
+				var acesso = {
+					'email': email,
+					'password': password
+				}
+
+				var dados = JSON.stringify(acesso)
+
+				// console.log(acesso)
+
+				$.ajax({
+					url:'../Controller/login_usuario.php',
+					type: 'POST',
+					data: {data: dados},
+					beforeSend: function(){
+						$('#resposta').html('<div class=" text-success" role="status"><span class="sr-only">Loading...</span></div>')
+					},
+					success: function(result){
+						if(result === '1'){
+							// console.log(result)
+							$(document).ready(function(){ window.location.href ="dashboard.php"; });
+						}else{
+							// console.log(typeof(result))
+							$('#resposta').html('<div class="alert alert-danger" role="alert">'+result+'</div>')
+						}
+
+					},
+					error: function(result){
+						$('#resposta').html('<div class="alert alert-danger" role="alert">'+result+'</div>')
+
+					}
+				})
+			}
+
+		})
+
+	</script>
 </html>

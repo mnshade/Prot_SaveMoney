@@ -119,7 +119,7 @@
 										</div>
 										<div class="col-sm ">
 											<h4 class="text-success m-0 p-0 pl-2 ml-2">Investido</h4>
-											<h5 class="display-2 m-0 p-0 pl-2 ml-2 text-success">R$00,00</h5>
+											<h5 class="display-3 m-0 p-0 pl-2 ml-2 text-success">R$00,00</h5>
 
 											<!-- Button trigger modal -->
 											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#investir">
@@ -210,9 +210,18 @@
 							type: 'POST',
 							data: {data: dados},
 							success: function(result){
-								// console.log(result)
+
+								if(result.length >= 4){
+									$("#deposito").text("R$"+result+',00').removeClass("display-3").addClass("display-2");
+								}else if( (result.length >= 1) || (result.length <= 4) ){
+									$("#deposito").text("R$"+result+',00')
+								}else{
+									$("#deposito").text('R$00,00')
+								}
+
+								// console.log(typeof(result.length))
 								// $('#deposito').prependTo(data['SUM(DepositoEconomiaUsuario)']);
-								$("#deposito").text("R$"+result+',00');
+								
 							},
 							error: function(jqXHR, textStatus, errorThrown) {
 								console.log(textStatus, erroThorwn);
