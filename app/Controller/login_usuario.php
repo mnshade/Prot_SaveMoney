@@ -32,7 +32,8 @@
             
                 echo true;                
                 // header('Location: ../View/dashboard.php');
-            }
+            }else
+                echo "Usuário ou senha incorreto. Prencha novamente.";
 
         }else
                 echo "Usuário ou senha incorreto. Prencha novamente.";

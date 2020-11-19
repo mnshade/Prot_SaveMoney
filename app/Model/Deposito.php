@@ -18,10 +18,12 @@
 
         }
         
-        public function Read($param, $id){
+        public function Read(){
 
             $conn = new Connection();
             $pdo = $conn->Connect();
+
+            $numArgs = func_num_args();
 
             $sql = $pdo->prepare("select SUM(DepositoEconomiaValor) from depositousuario WHERE $param= :id");
             $sql->execute(array('id' => $id));

@@ -6,8 +6,12 @@
 
     $data = json_decode($json, true);
 
+    if(isset($_post['saldo'])){
+        $saldo = $_POST['saldo'];
+    }
+
     $deposito = new Deposito();
-    $resultado = $deposito->Read($data['param'], $data['id']);
+    $resultado = $deposito->Read($data['param'], $data['id'], $saldo);
 
     // $retorno = $resultado['SUM(DepositoEconomiaValor)'];
 
