@@ -29,6 +29,17 @@
 							<a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
 						</a></div>
 					</div>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  								Editar Perfil
+  							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">Informações</a>
+								<a class="dropdown-item" href="#">Segurança</a>
+								<a class="dropdown-item" href="#">Atendimento ao Cliente</a>
+								<a class="dropdown-item" href="#">Sair</a>
+							</div>
+						</div>
 				</div>
 			</div>
 			<div class="app">
@@ -137,7 +148,14 @@
 															</button>
 														</div>
 													<div class="modal-body">
-														<form action="" method="POST"></form>
+														<form action="" method="POST">
+															<label for="">Valor depositar</label>
+															<input type="text" class="form-control">
+															<label for="">Objetivo:</label>
+															<select class="custom-select custom-select-lg mb-3">
+																<option selected disabled>Escolha o Objetivo</option>
+															</select>
+														</form>
 													</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -157,7 +175,7 @@
 									  <div class="card-body">
 										<h5 class="card-title">Poupança</h5>
 										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="poupanca.html"><button>Acessar</button></a> </small></p>
+										<p class="card-text"><small class="text-muted"><a href="poupanca.php"><button>Acessar</button></a> </small></p>
 									  </div>
 									</div>
 									<div class="card">
@@ -200,7 +218,8 @@
 					
 						var usuario = {
 							'id': '<?php echo $_SESSION['user']?>',
-							'param': 'Usuario_UsuarioID'
+							'param': 'Usuario_UsuarioID',
+							'saldo': 'saldo'
 						}
 							
 						var dados = JSON.stringify(usuario);
@@ -212,7 +231,7 @@
 							success: function(result){
 
 								if(result.length >= 4){
-									$("#deposito").text("R$"+result+',00').removeClass("display-3").addClass("display-2");
+									$("#deposito").text("R$"+result+',00').removeClass("display-2").addClass("display-3");
 								}else if( (result.length >= 1) || (result.length <= 4) ){
 									$("#deposito").text("R$"+result+',00')
 								}else{
@@ -220,8 +239,7 @@
 								}
 
 								// console.log(typeof(result.length))
-								// $('#deposito').prependTo(data['SUM(DepositoEconomiaUsuario)']);
-								
+																
 							},
 							error: function(jqXHR, textStatus, errorThrown) {
 								console.log(textStatus, erroThorwn);
