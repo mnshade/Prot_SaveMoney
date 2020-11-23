@@ -172,7 +172,7 @@
 									  <div class="card-body">
 										<h5 class="card-title">Objetivos</h5>
 										<p class="card-text">Fazer uma imagem ou algo tipo que altere coma entrada e saída do valor</p>
-										<p class="card-text"><small class="text-muted"><a href="sonho.html"><button>Acessar</button></a> </small></p>
+										<p class="card-text"><small class="text-muted"><a href="listar_objetivos.php"><button>Acessar</button></a> </small></p>
 									  </div>
 									</div>
 									<div class="card">
@@ -197,7 +197,7 @@
 			<script src="js/jquery.js"></script>
 			<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-			<script src='js/app.min.js'></script>
+			<!-- <script src='js/app.min.js'></script> -->
 		
 			<script>
 
@@ -205,13 +205,13 @@
 
 					$(document).ready(function(){
 					
-						var usuario = {
+						var saldo = {
 							'id': '<?php echo $_SESSION['user']?>',
 							'param': 'Usuario_UsuarioID',
 							'saldo': 'saldo'
 						}
 							
-						var dados = JSON.stringify(usuario);
+						var dados = JSON.stringify(saldo);
 						
 						$.ajax({
 							url: '../Controller/read_deposito.php',
@@ -219,13 +219,13 @@
 							data: {data: dados},
 							success: function(result){
 
-								if(result.length >= 4){
+								if(result.length >= 4)
 									$("#deposito").text("R$"+result+',00').removeClass("display-2").addClass("display-3");
-								}else if( (result.length >= 1) || (result.length <= 4) ){
+								else if( (result.length >= 1) || (result.length <= 4) )
 									$("#deposito").text("R$"+result+',00')
-								}else{
+								else
 									$("#deposito").text('R$00,00')
-								}
+								
 
 								// console.log(typeof(result.length))
 																

@@ -24,13 +24,26 @@
             $pdo = $conn->Connect();
 
             $numArgs = func_num_args();
+            $args = func_get_args();
 
-            $sql = $pdo->prepare("select SUM(DepositoEconomiaValor) from depositousuario WHERE $param= :id");
-            $sql->execute(array('id' => $id));
+            // var_dump($numArgs, $args);
 
-            $retorno = $sql->fetch();
+            if($numArgs === 3){
+                $param = $args[0];
+                $sql = $pdo->prepare("select SUM(DepositoEconomiaValor) from depositousuario WHERE $param= :id");
+                $sql->execute(array('id' => $args[1]));  
+                $retorno = $sql->fetch();   
+                
+                // var_dump($retorno);
+                return $retorno[0];
+            }else{
+                $param = $args[0];
+                $sql = $pdo->prepare("select * from depositousuario WHERE $param= :id");
+                $sql->execute(array('id' => $args[1]));  
+                $retorno = $sql->fetchAll();                        
 
-            return $retorno[0];
+                return $retorno;
+            }
             
         }
 

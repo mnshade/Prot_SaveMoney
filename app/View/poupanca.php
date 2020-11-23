@@ -66,13 +66,15 @@
 									<table class="table table-hover">
 										<thead>
 											<tr>
-											<th scope="col">Id</th>
-											<th scope="col">Valor</th>
-											<th scope="col">Data</th>
-											<th scope="col">Observação</th>
+												<th scope="col">Id</th>
+												<th scope="col">Valor</th>
+												<th scope="col">Data</th>
+												<th scope="col">Observação</th>
+												<th scope="col">Alterar</th>
+												<th scope="col">Excluir</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody id="body-table">
 										</tbody>
 									</table>
 								</div>
@@ -88,12 +90,53 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<!-- jQuery and JS bundle w/ Popper.js -->
-	<script src="js/jquery.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-	<script src='js/app.min.js'></script>
+	<!-- <script src='js/app.min.js'></script> -->
+	<script src="js/jquery.js"></script>
 	<script>
 
+		$(document).ready(function(){
+
+			var poupanca = {
+				'id': <?php echo $_SESSION['user'];?>,
+				'param': 'Usuario_UsuarioID'
+			}
+
+			var dados = JSON.stringify(poupanca);
+
+			$.ajax({
+				url: '../Controller/read_deposito.php',
+				type: 'POST',
+				data: {data: dados},
+				success: function(result){
+
+					var json = JSON.parse(result)
+
+					for(var i=0;i<(json.length);i++){
+						$('#body-table').append('<tr id="row-table'+i+'"></tr>')
+						for(var j=0;j<6;j++){
+							if(j<4)
+								$("#row-table"+i).append('<td scope="col">'+json[i][j]+'</td>');
+							else if(j==4)	
+								$("#row-table"+i).append('<td scope="col"><button type="button" class="btn btn-info">Alterar</button></td>');
+							else
+								$("#row-table"+i).append('<td scope="col"><button type="button" class="btn btn-danger">Excluir</button></td>');
+
+						}
+					}
+					
+					// console.log(json.length)
+												
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+				console.log(textStatus, erroThorwn);
+				
+				}
+
+			})
+		})
 
 	</script>
 		
