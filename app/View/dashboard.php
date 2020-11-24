@@ -217,6 +217,9 @@
 							url: '../Controller/read_deposito.php',
 							type: 'POST',
 							data: {data: dados},
+							// beforeSend: function(){
+							// 	$('#deposito').append('<div class="spinner-border text-success" role="status">span class="sr-only">Loading...</span></div>')
+							// }
 							success: function(result){
 
 								if(result.length >= 4)
