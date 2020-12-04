@@ -41,8 +41,14 @@
         }
 
         public function Read(){
-            
+            $conn = new Connection();
+            $pdo = $conn->Connect();
 
+            $sql = "SELECT * FROM objetivousuario(NomeObjetivo, DataObjetivoIni, DataObejtivoFim, ObjetivoValor, ObjetivoDesc)
+            WHERE  $id = 1;";
+            $stmt = $pdo->prepare($sql);
+            $resultado = $stmt->execute([$this->nome, $this->inicio, $this->fim, $this->valor, $this->descricao, $this->id]);
+            return $resultado;
         }
 
         public function Edit(){
