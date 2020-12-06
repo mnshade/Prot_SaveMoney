@@ -18,17 +18,32 @@
 
         }
         
-        public function Read($param, $id){
+        public function Read(){
 
             $conn = new Connection();
             $pdo = $conn->Connect();
 
-            $sql = $pdo->prepare("select SUM(DepositoEconomiaValor) from depositousuario WHERE $param= :id");
-            $sql->execute(array('id' => $id));
+            $numArgs = func_num_args();
+            $args = func_get_args();
 
-            $retorno = $sql->fetch();
+            // var_dump($numArgs, $args);
 
-            return $retorno[0];
+            if($numArgs === 3){
+                $param = $args[0];
+                $sql = $pdo->prepare("select SUM(DepositoEconomiaValor) from depositousuario WHERE $param= :id");
+                $sql->execute(array('id' => $args[1]));  
+                $retorno = $sql->fetch();   
+                
+                // var_dump($retorno);
+                return $retorno[0];
+            }else{
+                $param = $args[0];
+                $sql = $pdo->prepare("select * from depositousuario WHERE $param= :id");
+                $sql->execute(array('id' => $args[1]));  
+                $retorno = $sql->fetchAll();                        
+
+                return $retorno;
+            }
             
         }
 
