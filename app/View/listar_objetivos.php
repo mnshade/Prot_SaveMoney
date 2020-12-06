@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang='pt-br'>
@@ -54,7 +56,7 @@
 						</div>
 						<div class="app__main">
 							<div class="text-container">
-								<h3 class="app__main__title">Lista do seus Objetivos</h3>
+								<h3 class="app__main__title">Lista de Objetivos</h3>
 								<p>Logo abaixo está listado seus objetivos.</p>
 								<div class="container-fluid border rounded shadow">
 									<table class="table">
@@ -70,18 +72,34 @@
 										  </tr>
 										</thead>
 										<tbody>
+										  <?php 
+										  
+												require '../Model/Connection.php';
+												session_start();
+												$iduser = $_SESSION['user'];
+												
+												$sql = "SELECT * FROM objetivousuario WHERE Usuario_UsuarioID ='".$iduser."';";
+												$conn = new Connection();
+												$pdo = $conn->Connect();
+												$stmt = $pdo->prepare($sql);
+												$stmt->execute();
+												while($dado = $stmt->fetch(PDO::FETCH_OBJ)){
+																				  										 
+										 ?>
 											<tr>
+											    
+												<td><?php echo $dado->NomeObjetivo;?></td>	
+												<td><?php echo date("d/m/Y",strtotime($dado->DataObjetivoIni));?></td>
+												<td><?php echo date("d/m/Y", strtotime($dado->DataObejtivoFim));?></td>
+												<td><?php echo $dado->ObjetivoDesc;?></td>
+												<td><?php echo $dado->ObjetivoValor;?></td>
+												
 											
-												<td>Comprar carro</td>	
-												<td>10/09/2020</td>
-												<td>10/09/2020</td>
-												<td>um carrro 0km para ir para o trabalho sem maiores problemas</td>
-												<td>R$2000</td>
 												<td><a href="#" style="color:orange;text-decoration:none">Editar</a>|<a href="?listar_objetivos.php" style="color:red;text-decoration:none">Deletar</a>
 												
-												</td>
-				
+												</td> 
 											</tr>
+												<?php } ?>
 										</tbody>
 									  </table>
 								</div>							
