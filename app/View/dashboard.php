@@ -45,31 +45,13 @@
 			<div class="app">
 				<div class="container my-4">
 					<div class="app__inner">
-						<div class="app__menu m-0 py-0">
-							<ul class="vMenu pt-4 text-centered">
-								<li>
-									<p>Inicio</p>
-									<ul>										
-										<li><a href="#">Visão Geral</a></li>
-									</ul>
-								</li>									
-								<li>
-									<p class="bolder">Poupança</p>
-									<ul>
-										<li><a href="#">Histórico de Depósito</a></li>
-										<li><a href="#"></a></li>
-									</ul>
-								</li>
-								<li>
-									<p class="bolder">Objetivo</p>
-									<ul>
-										<li><a href="criar_objetivo.php">Criar Objetivos</a></li>
-										<li><a href="listar_objetivos.php">Listar Objetivos</a></li>
-										
-									</ul>
-								</li>
-							</ul>
-						</div>
+					<div class="vertical-menu">
+						<a href="#" class="active">Visão Geral</a>
+						<a href="#">Histórico de Depósito</a>
+						<p class="bolder">Objetivo</p>
+						<a href="criar_objetivo.php">Criar Objetivos</a>
+						<a href="listar_objetivos.php">Listar Objetivos</a>
+					</div>
 						<div class="app__main">
 							<div class="text-container ml-3">
 								<h2 class="app__main__title">Bem vindo(a) <span class="text-success bolder"><?php echo $_SESSION['nome'];?></span> de volta!</h3>
