@@ -94,8 +94,8 @@
 												<td><?php echo $dado->ObjetivoDesc;?></td>
 												<td><?php echo $dado->ObjetivoValor;?></td>
 												
-											
-												<td><a href="#" style="color:orange;text-decoration:none">Editar</a>|<a href="?listar_objetivos.php" style="color:red;text-decoration:none">Deletar</a>
+											     
+												<td><a href="#" style="color:orange;text-decoration:none">Editar</a>|<a href="../Controller/deletar_objetivo.php" style="color:red;text-decoration:none">Deletar</a>
 												
 												</td> 
 											</tr>
@@ -105,9 +105,7 @@
 								</div>							
 							</div>
 						</div>
-						
-								
-							
+					
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 			<footer>
@@ -117,6 +115,6 @@
 				<script src='js/app.min.js'></script>
 			</footer>
 		
-		
+	    
 	</body>
 </html>
