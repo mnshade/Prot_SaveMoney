@@ -16,41 +16,25 @@
 				<nav class="nav__mobile"></nav>
 				<div class="container">
 					<div class="navbar__inner">
-						<a href="dashboard.html" class="navbar__logo">SaveMoney</a>						
+						<a href="dashboard.php" class="navbar__logo">SaveMoney</a>						
 						<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
 					</div>
 				</div>
 			</div>
+
+			<br>
+			<br>
 			<div class="app">
 				<div class="container">
-					<div class="app__inner mt-3">
-						<div class="app__menu ">
-							<ul class="vMenu">
-								<li><a>Inicio</a></li>
-								<li><a href="dashboard.html" class="vMenu--active">Visão Geral</a></li>
-								<li><a href="poupanca.html">Poupança</a>
-									<ul>
-										<li><a href="poupanca_depositar.html">Depositar</a></li><br>
-										<li><a href="poupanca_retirada.html">Retirada</a></li><br>
-									</ul>
-								</li>
-								<li><a href="sonho.html">Sonho</a>
-									<ul>
-										<li><a href="#">Criar Objetivo</a></li><br>
-										<li><a href="listar_objetivos.php">Meus Objetivos</a></li><br>
-										<li><a href="depositar_sonho.html">Depositar</a></li><br>
-										<li><a href="retirar_sonho.html">Retirada</a></li><br>
-									</ul>
-								</li>
-								<li><a href="editar_perfil.html">Editar Perfil</a>
-									<ul>
-										<li><a href="info_perfil.html">Informações</a></li><br>
-										<li><a href="seguranca_perfil.html">Segurança</a></li><br>
-										<li><a href="atendimento.html">Atendimento ao Cliente</a></li><br>
-									</ul>
-								</li>
-								<li>SAIR</li>
-							</ul>
+					<div class="app__inner">
+						<div class="app__menu">
+						<div class="vertical-menu">
+						<a href="index.html" class="active">Visão Geral</a>
+						<a href="#">Histórico de Depósito</a>						
+						<a href="criar_objetivo.php">Criar Objetivos</a>
+						<a href="listar_objetivos.php">Listar Objetivos</a>
+						
+					</div>
 						</div>
 						<div class="app__main">
 							<div class="text-container">

@@ -46,10 +46,11 @@
 				<div class="container my-4">
 					<div class="app__inner">
 					<div class="vertical-menu">
-						<a href="#" class="active">Visão Geral</a>
+						<a href="index.html" class="active">Visão Geral</a>
 						<a href="#">Histórico de Depósito</a>						
 						<a href="criar_objetivo.php">Criar Objetivos</a>
 						<a href="listar_objetivos.php">Listar Objetivos</a>
+						
 					</div>
 						<div class="app__main">
 							<div class="text-container ml-3">
@@ -115,7 +116,7 @@
 
 											<!-- Button trigger modal -->
 											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#investir">
-											Invertir
+											Investir
 											</button>
 
 											<!-- Modal -->
