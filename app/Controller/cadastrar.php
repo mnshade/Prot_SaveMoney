@@ -10,7 +10,9 @@
     if(empty($nome) || empty($email) || empty($password)){
         $_SESSION['msg'] = 'Algum campo não está preenchido incorretamente. Prencha novamente.';
         header("Location: ../View/cadastro.php");
+        
     }
+
     else{
 
         $user = new User();
