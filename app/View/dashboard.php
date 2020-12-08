@@ -47,8 +47,7 @@
 					<div class="app__inner">
 					<div class="vertical-menu">
 						<a href="#" class="active">Visão Geral</a>
-						<a href="#">Histórico de Depósito</a>
-						<p class="bolder">Objetivo</p>
+						<a href="#">Histórico de Depósito</a>						
 						<a href="criar_objetivo.php">Criar Objetivos</a>
 						<a href="listar_objetivos.php">Listar Objetivos</a>
 					</div>

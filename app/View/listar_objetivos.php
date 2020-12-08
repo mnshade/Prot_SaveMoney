@@ -68,7 +68,7 @@
 											<th scope="col">Descrição</th>	
 											<th scope="col">Valor</th>
 											<th scope="col">Ação</td>
-																		
+																	
 										  </tr>
 										</thead>
 										<tbody>
@@ -95,7 +95,7 @@
 												<td><?php echo $dado->ObjetivoValor;?></td>
 												
 											
-												<td><a href="#" style="color:orange;text-decoration:none">Editar</a>|<a href="?listar_objetivos.php" style="color:red;text-decoration:none">Deletar</a>
+												<td><a href="update.php" style="color:orange;text-decoration:none">Editar</a>|<a href="?listar_objetivos.php" style="color:red;text-decoration:none">Deletar</a>
 												
 												</td> 
 											</tr>
@@ -106,7 +106,28 @@
 							</div>
 						</div>
 						
-								
+					<div class="modal2">						
+							<div>
+								<form>
+								<label for="titulo">Título:</label><br>
+								<input type="text" id="titulo" name="titulo"><br>
+								<label for="inicio">Início</label><br>
+								<input type="date" id="Início" name="Início">
+								<label for="Fim">Fim</label><br>
+								<input type="date" id="Fim" name="Fim">
+								<label for="Descrição">Descrição</label><br>
+								<input type="text" id="Descrição" name="Descrição">
+								<label for="Valor">Valor</label><br>
+								<input type="number" id="Valor" name="Valor">	
+								<label for="Ação">Ação</label><br>
+								<input type="text" id="Ação" name="Ação">
+								</form>
+							</div>
+							
+						
+
+					</div>
+
 							
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 

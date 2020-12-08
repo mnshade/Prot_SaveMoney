@@ -1265,3 +1265,17 @@ select {
   background-color: #4CAF50; /* Add a green color to the "active/current" link */
   color: white;
 }
+
+.modal2{
+  width: 50%;
+  height: 45% ;
+  background-color: black;
+  position: absolute;
+  margin: 0px auto;
+  
+
+}
+
+.modal3{
+  
+}
