@@ -13,7 +13,6 @@
    <a href="https://github.com/TIvander">Vander</a><br>
    <a href="https://github.com/AugustoGCP">Augusto</a><br>
    <a href="https://github.com/EdmilsonScovino">Edmilson Scovino</a><br>
-   <a href="https://github.com/mnshade">Gustavo Paz</a><br>
    <a href="#">Davi</a><br>
 <hr>  
    <a href="http://granbery.edu.br/"><b>Faculty: Granbery Methodist College<b></a>
