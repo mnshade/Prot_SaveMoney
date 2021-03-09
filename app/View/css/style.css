@@ -650,7 +650,7 @@ select {
       display: none; } }
 
 .navbar--extended {
-  background-color: transparent; }
+  background-color: #65b53; }
   .navbar--extended .navbar__inner {
     height: 60px;
     color: #ffffff; }
